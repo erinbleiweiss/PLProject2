@@ -7,54 +7,50 @@ public class PersonApp {
 
     public static void main(String args[]) {
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Welcome to the Person Tester application");
-        System.out.print("Create customer or employee? (c/e): ");
-        String choice = sc.nextLine();
+        Console.displayLine("Welcome to the Person Tester application");
+        Console.displayLine();
+        String choice = Console.getString("Create customer or employee? (c/e): ");
 
         if (choice.equals("c")) {
             Customer c = new Customer();
 
-            System.out.print("Enter first name: ");
-            String firstName = sc.nextLine();
+            String firstName = Console.getString("Enter first name: ");
             c.setFirstName(firstName);
 
-            System.out.print("Enter last name: ");
-            String lastName = sc.nextLine();
+            String lastName = Console.getString("Enter last name: ");
             c.setLastName(lastName);
 
-            System.out.print("Enter email address: ");
-            String email = sc.nextLine();
+            String email = Console.getString("Enter email address: ");
             c.setEmail(email);
 
-            System.out.print("Customer number: ");
-            String custNum = sc.nextLine();
-            c.setCustomerNum(custNum);
+            String customerNum = Console.getString("Customer number: ");
+            c.setCustomerNum(customerNum);
+
+            print(c);
 
         } else if (choice.equals("e")) {
             Employee e = new Employee();
 
-            System.out.print("Enter first name: ");
-            String firstName = sc.nextLine();
+            String firstName = Console.getString("Enter first name: ");
             e.setFirstName(firstName);
 
-            System.out.print("Enter last name: ");
-            String lastName = sc.nextLine();
+            String lastName = Console.getString("Enter last name: ");
             e.setLastName(lastName);
 
-            System.out.print("Enter email address: ");
-            String email = sc.nextLine();
+            String email = Console.getString("Enter email address: ");
             e.setEmail(email);
 
-            System.out.print("Customer number: ");
-            String custNum = sc.nextLine();
-            e.set(custNum);
+            String ssn = Console.getString("Social security number: ");
+            e.setSsn(ssn);
 
+            print(e);
         }
-
 
     }
 
+    public static void print(Person p) {
+        System.out.println("You entered:");
+        System.out.print(p.getDisplayText());
+    }
 
 }

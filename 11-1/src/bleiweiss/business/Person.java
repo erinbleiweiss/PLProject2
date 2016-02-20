@@ -7,7 +7,6 @@ public abstract class Person {
     String email;
 
     public Person() {
-
     }
 
     public String getFirstName() {

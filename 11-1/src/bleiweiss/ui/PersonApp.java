@@ -1,7 +1,6 @@
 package bleiweiss.ui;
 
 import bleiweiss.business.*;
-import java.util.Scanner;
 
 public class PersonApp {
 

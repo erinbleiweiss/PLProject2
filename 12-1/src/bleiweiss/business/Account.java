@@ -11,7 +11,7 @@ public class Account implements Balanceable, Depositable, Withdrawable {
     private double balance;
 
     public Account() {
-        this.balance = 0.0;
+        this.balance = 1000.0;
     }
 
     @Override

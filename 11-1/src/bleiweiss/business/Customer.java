@@ -2,18 +2,18 @@ package bleiweiss.business;
 
 public class Customer extends Person{
 
-    private int customerNum;
+    private String customerNum;
 
     public Customer(){
         super();
-        customerNum = 0;
+        customerNum = "";
     }
 
-    public int getCustomerNum() {
+    public String getCustomerNum() {
         return customerNum;
     }
 
-    public void setCustomerNum(int customerNum) {
+    public void setCustomerNum(String customerNum) {
         this.customerNum = customerNum;
     }
 

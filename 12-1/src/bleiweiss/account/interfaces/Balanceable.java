@@ -1,7 +1,6 @@
 package bleiweiss.account.interfaces;
 
-/**
- * Created by Allyson on 2/19/16.
- */
 public interface Balanceable {
+    double getBalance();
+    void setBalance(double amount);
 }

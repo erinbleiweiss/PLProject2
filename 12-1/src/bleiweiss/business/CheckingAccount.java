@@ -12,15 +12,15 @@ public class CheckingAccount extends Account{
     }
 
     public void subtractMonthlyFee(){
-
+        setBalance(getBalance() - getMonthlyFee());
     }
 
     public void setMonthlyFee(double monthlyFee){
-
+        this.monthlyFee = monthlyFee;
     }
 
     public double getMonthlyFee(){
-
+        return monthlyFee;
     }
 
     public String getMonthlyFeeFormatted(){

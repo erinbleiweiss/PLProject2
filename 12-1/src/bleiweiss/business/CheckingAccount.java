@@ -7,6 +7,7 @@ public class CheckingAccount extends Account{
     private double monthlyFee;
 
     public CheckingAccount() {
+        super();
         this.monthlyFee = 1.0;
     }
 

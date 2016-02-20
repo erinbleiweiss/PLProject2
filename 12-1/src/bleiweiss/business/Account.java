@@ -8,27 +8,31 @@ import java.text.NumberFormat;
 
 public class Account implements Balanceable, Depositable, Withdrawable {
 
+    private double balance;
+
     public Account() {
+        this.balance = 0.0;
     }
 
     @Override
     public double getBalance() {
-        return 0;
+        return balance;
     }
 
     @Override
     public void setBalance(double amount) {
+        this.balance = amount;
 
     }
 
     @Override
     public void deposit(double amount) {
-
+        this.balance += amount;
     }
 
     @Override
     public void withdraw(double amount) {
-
+        this.balance -= amount;
     }
 
     public String getBalanceFormatted(){

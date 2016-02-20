@@ -8,48 +8,60 @@ public class PersonApp {
 
         Console.displayLine("Welcome to the Person Tester application");
         Console.displayLine();
-        String choice = Console.getString("Create customer or employee? (c/e): ");
 
-        if (choice.equals("c")) {
-            Customer c = new Customer();
+        String shouldContinue = "y";
 
-            String firstName = Console.getString("Enter first name: ");
-            c.setFirstName(firstName);
+        while (shouldContinue.equalsIgnoreCase("y")){
+            String choice = Console.getString("Create customer or employee? (c/e): ");
+            Console.displayLine();
 
-            String lastName = Console.getString("Enter last name: ");
-            c.setLastName(lastName);
+            if (choice.equals("c")) {
+                Customer c = new Customer();
 
-            String email = Console.getString("Enter email address: ");
-            c.setEmail(email);
+                String firstName = Console.getString("Enter first name: ");
+                c.setFirstName(firstName);
 
-            String customerNum = Console.getString("Customer number: ");
-            c.setCustomerNum(customerNum);
+                String lastName = Console.getString("Enter last name: ");
+                c.setLastName(lastName);
 
-            print(c);
+                String email = Console.getString("Enter email address: ");
+                c.setEmail(email);
 
-        } else if (choice.equals("e")) {
-            Employee e = new Employee();
+                String customerNum = Console.getString("Customer number: ");
+                c.setCustomerNum(customerNum);
 
-            String firstName = Console.getString("Enter first name: ");
-            e.setFirstName(firstName);
+                print(c);
 
-            String lastName = Console.getString("Enter last name: ");
-            e.setLastName(lastName);
+            } else if (choice.equals("e")) {
+                Employee e = new Employee();
 
-            String email = Console.getString("Enter email address: ");
-            e.setEmail(email);
+                String firstName = Console.getString("Enter first name: ");
+                e.setFirstName(firstName);
 
-            String ssn = Console.getString("Social security number: ");
-            e.setSsn(ssn);
+                String lastName = Console.getString("Enter last name: ");
+                e.setLastName(lastName);
 
-            print(e);
+                String email = Console.getString("Enter email address: ");
+                e.setEmail(email);
+
+                String ssn = Console.getString("Social security number: ");
+                e.setSsn(ssn);
+
+                print(e);
+            }
+
+            Console.displayLine();
+            shouldContinue = Console.getString("Continue? (y/n): ");
+            Console.displayLine();
         }
+
 
     }
 
     public static void print(Person p) {
-        System.out.println("You entered:");
-        System.out.print(p.getDisplayText());
+        Console.displayLine();
+        Console.displayLine("You entered:");
+        Console.displayLine(p.getDisplayText());
     }
 
 }

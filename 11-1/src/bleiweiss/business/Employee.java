@@ -1,6 +1,6 @@
 package bleiweiss.business;
 
-public class Employee {
+public class Employee extends Person {
 
     private String ssn;
 
